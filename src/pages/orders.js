@@ -1,6 +1,7 @@
 import moment from "moment/moment";
-import { unstable_getServerSession } from "next-auth/next";
-import { useSession } from "next-auth/react";
+
+
+import { getSession, useSession } from "next-auth/react";
 import db from "../../firebase";
 import { Header, Order } from "../components";
 import { authOptions } from "../pages/api/auth/[...nextauth]";
@@ -41,14 +42,15 @@ function Orders({ orders }) {
 
 export default Orders;
 
-export async function getServerSideProps(context) {
+export async function getStaticProps(context) {
   const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
   //get the users logged in credentials
-  const session = await unstable_getServerSession(
-    context.req,
-    context.res,
-    authOptions
-  );
+  // const session = await unstable_getServerSession(
+  //   context.req,
+  //   context.res,
+  //   authOptions
+  // );
+  const session = await getSession();
   if (!session) {
     return {
       props: {},

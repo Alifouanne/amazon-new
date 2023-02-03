@@ -1,9 +1,8 @@
-import { unstable_getServerSession } from "next-auth/next";
+import { getSession } from "next-auth/react";
 import Head from "next/head";
 import { QueryClient, dehydrate, useQuery } from "react-query";
-
 import { Banner, Header, ProductFeed } from "../components";
-import { authOptions } from "../pages/api/auth/[...nextauth]";
+
 const fetchProducts = async () =>
   await (await fetch("https://fakestoreapi.com/products")).json();
 
@@ -29,12 +28,8 @@ export default function Home() {
   );
 }
 
-export async function getServerSideProps(context) {
-  const session = await unstable_getServerSession(
-    context.req,
-    context.res,
-    authOptions
-  );
+export async function getStaticProps(context) {
+  const session = await getSession();
   const client = new QueryClient();
   await client.prefetchQuery("products", fetchProducts);
 

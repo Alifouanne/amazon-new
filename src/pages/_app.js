@@ -1,5 +1,5 @@
 import { SessionProvider } from "next-auth/react";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Hydrate, QueryClient, QueryClientProvider } from "react-query";
 
 import "../styles/globals.css";
