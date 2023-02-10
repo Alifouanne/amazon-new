@@ -24,8 +24,9 @@ const Order = ({ id, amount, amountShipping, items, timestamp, images }) => {
       </div>
       <div className="p-5 sm:p-10">
         <div className="flex space-x-6 overflow-x-auto">
-          {images.map((image) => (
+          {images.map((image, index) => (
             <img
+              key={index}
               src={image}
               alt="product"
               className="h-20 object-contain sm:h-32"
