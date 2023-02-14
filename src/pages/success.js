@@ -1,11 +1,9 @@
 import { useRouter } from "next/router";
 import { BsFillCheckCircleFill } from "react-icons/bs";
-import { Header } from "../components";
 const Success = () => {
   const router = useRouter();
   return (
     <div className="bg-deafult h-screen">
-      <Header />
       <main className="max-w-screen-xl mx-auto">
         <div className="flex flex-col p-10 bg-white rounded-md">
           <div className="flex items-center space-x-2 mb-5">

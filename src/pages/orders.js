@@ -2,14 +2,13 @@ import moment from "moment/moment";
 import { getServerSession } from "next-auth/next";
 import { useSession } from "next-auth/react";
 import db from "../../firebase";
-import { Header, Order } from "../components";
+import { Order } from "../components";
 import { authOptions } from "../pages/api/auth/[...nextauth]";
 function Orders({ orders }) {
   const { data: session } = useSession();
 
   return (
     <div className="bg-deafult ">
-      <Header />
       <main className="max-w-screen-xl mx-auto p-10 bg-white rounded-md">
         <h1 className="text-3xl border-b mb-2 pb-1 border-yellow-400">
           Your Orders

@@ -1,7 +1,7 @@
 import { getSession } from "next-auth/react";
 import Head from "next/head";
 import { QueryClient, dehydrate, useQuery } from "react-query";
-import { Banner, Header, ProductFeed } from "../components";
+import { Banner, ProductFeed } from "../components";
 
 const fetchProducts = async () =>
   await (await fetch("https://fakestoreapi.com/products")).json();
@@ -17,7 +17,7 @@ export default function Home() {
         <title>Amazon 2.0</title>
       </Head>
       {/* Header */}
-      <Header />
+      {/* I used next js layot in _app.js for header component */}
       <main className="max-w-screen-xl mx-auto">
         {/* Banner */}
         <Banner />

@@ -4,7 +4,7 @@ import { useSession } from "next-auth/react";
 import Image from "next/image";
 import Currency from "react-currency-formatter";
 import useStore from "../app/ZustandStore";
-import { CheckoutProduct, Header } from "../components";
+import { CheckoutProduct } from "../components";
 const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY);
 const Checkout = () => {
   const store = useStore();
@@ -26,7 +26,6 @@ const Checkout = () => {
   };
   return (
     <div className="bg-deafult">
-      <Header />
       <main className="lg:flex max-w-screen-xl mx-auto">
         {/* left section */}
         <div>
