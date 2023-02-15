@@ -20,7 +20,7 @@ const Header = () => {
       <div className="flex items-center  bg-amazon_blue p-1 grow py-2">
         <div className="mt-2 flex items-center grow sm:grow-0 mx-6">
           <Image
-            src="/amazon.png"
+            src="/images/amazon.png"
             width={150}
             height={40}
             alt="amazon logo"

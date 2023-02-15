@@ -51,7 +51,8 @@ const Product = ({ id, title, description, category, image, rate, price }) => {
 
       {hasPrime < 3 ? (
         <div className="flex items-center space-x-2 -mt-5">
-          <img src="prime.png" alt="prime" className="w-12" />
+          {/* <img src="prime.png" alt="prime" className="w-12" /> */}
+          <Image src="/images/prime.png" alt="prime" width={48} height={48} />
           <p className="text-xs text-gray-500">Free Next-day Delivery</p>
         </div>
       ) : null}

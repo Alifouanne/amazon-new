@@ -57,7 +57,12 @@ const CheckoutProduct = ({
         <Currency quantity={price} currency="GBP" />
         {hasPrime < 3 ? (
           <div className="flex items-center space-x-2">
-            <img src="/prime.png" alt="prime" loading="lazy" className="w-12" />
+            <img
+              src="/images/prime.png"
+              alt="prime"
+              loading="lazy"
+              className="w-12"
+            />
             <p className="text-xs text-gray-500">Free Next-day Delivery</p>
           </div>
         ) : null}

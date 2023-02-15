@@ -13,13 +13,13 @@ const Banner = () => {
         interval={5000}
       >
         <div>
-          <img src="carousel-1.jpg" alt="carousel-1" loading="lazy" />
+          <img src="/images/carousel-1.jpg" alt="carousel-1" loading="lazy" />
         </div>
         <div>
-          <img src="carousel-2.jpg" alt="carousel-2" loading="lazy" />
+          <img src="/images/carousel-2.jpg" alt="carousel-2" loading="lazy" />
         </div>
         <div>
-          <img src="carousel-3.jpg" alt="carousel-3" loading="lazy" />
+          <img src="/images/carousel-3.jpg" alt="carousel-3" loading="lazy" />
         </div>
       </Carousel>
     </div>

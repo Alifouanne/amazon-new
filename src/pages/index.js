@@ -1,4 +1,3 @@
-import { getSession } from "next-auth/react";
 import Head from "next/head";
 import { QueryClient, dehydrate, useQuery } from "react-query";
 import { Banner, ProductFeed } from "../components";
@@ -28,12 +27,11 @@ export default function Home() {
   );
 }
 
-export async function getStaticProps(context) {
-  const session = await getSession();
+export async function getStaticProps() {
   const client = new QueryClient();
   await client.prefetchQuery("products", fetchProducts);
 
   return {
-    props: { dehydratedState: dehydrate(client), session },
+    props: { dehydratedState: dehydrate(client) },
   };
 }

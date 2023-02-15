@@ -30,7 +30,7 @@ const Checkout = () => {
         {/* left section */}
         <div>
           <Image
-            src="/ad-1.png"
+            src="/images/ad-1.png"
             width={1020}
             height={250}
             className="object-contain grow m-5 shadow-sm rounded-md"

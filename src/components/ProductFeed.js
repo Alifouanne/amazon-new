@@ -19,7 +19,7 @@ const ProductFeed = ({ products }) => {
             rate={rating.rate}
           />
         ))}
-      <img src="ad.jpg" alt="ad" className="col-span-full m-auto" />
+      <img src="/images/ad.jpg" alt="ad" className="col-span-full m-auto" />
       <div className="md:col-span-2">
         {products
           ?.slice(4, 5)
