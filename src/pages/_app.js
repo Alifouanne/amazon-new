@@ -1,4 +1,5 @@
 import { SessionProvider } from "next-auth/react";
+import Head from "next/head";
 import React, { useEffect, useState } from "react";
 import { Hydrate, QueryClient, QueryClientProvider } from "react-query";
 import { Header } from "../components";
@@ -16,6 +17,9 @@ const MyApp = ({ Component, pageProps }) => {
     <SessionProvider session={pageProps.session}>
       <QueryClientProvider client={client.current}>
         <Hydrate state={pageProps.dehydratedState}>
+          <Head>
+            <link rel="shortcut icon" href="/favicon1.png" />
+          </Head>
           <Header />
           <Component {...pageProps} />
         </Hydrate>
